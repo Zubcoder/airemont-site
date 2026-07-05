@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор обоев онлайн: сколько рулонов нужно на комнату</title>
+<meta name="description" content="Онлайн-калькулятор обоев: рассчитайте, сколько рулонов нужно на комнату по периметру и высоте стен, с учётом длины и ширины рулона и подгонки рисунка (раппорта).">
+<meta name="keywords" content="калькулятор обоев, сколько рулонов обоев, расчёт обоев на комнату, обои раппорт, сколько обоев нужно">
+<link rel="canonical" href="https://airemont.ru/kalkulyatory/oboi.html">
+<meta property="og:title" content="Калькулятор обоев онлайн">
+<meta property="og:description" content="Сколько рулонов обоев нужно на комнату — точный расчёт.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://airemont.ru/kalkulyatory/oboi.html">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .calc { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); max-width:560px; }
+  .calc label { display:block; font-weight:600; margin:14px 0 6px; font-size:15px; }
+  .calc input, .calc select { width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:10px; font-size:16px; font-family:inherit; }
+  .calc .row { display:flex; gap:14px; } .calc .row > div { flex:1; }
+  .calc-result { margin-top:22px; background:#eef1fb; border-radius:12px; padding:20px; display:none; }
+  .calc-result.show { display:block; }
+  .calc-result .big { font-size:32px; font-weight:800; color:var(--navy); }
+  .calc-result .sub { color:var(--text-soft); font-size:14px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="../" class="nav-brand"><img class="logo-badge" src="../assets/logo.png" alt="AI Ремонт"> AI Ремонт</a>
+    <button class="nav-burger" aria-label="Меню">☰</button>
+    <nav class="nav-links">
+      <a href="../#articles">Инструкции</a>
+      <a href="kraska.html">Калькуляторы</a>
+      <a class="nav-cta" data-app-link href="#">Скачать приложение</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumbs">
+  <a href="../">Главная</a> → Калькулятор обоев
+</div>
+
+<div class="container article-wrap">
+  <article class="post">
+    <h1>Калькулятор обоев</h1>
+    <div class="meta">Расчёт числа рулонов на комнату</div>
+    <p>Укажите периметр (или длину и ширину) комнаты, высоту стен и параметры рулона. Калькулятор посчитает число целых полотен и рулонов с учётом подгонки рисунка.</p>
+
+    <div class="calc">
+      <div class="row">
+        <div><label for="len">Длина комнаты, м</label><input type="number" id="len" placeholder="4" min="0"></div>
+        <div><label for="wid">Ширина комнаты, м</label><input type="number" id="wid" placeholder="3" min="0"></div>
+      </div>
+      <label for="hei">Высота стен, м</label><input type="number" id="hei" placeholder="2.7" min="0">
+      <div class="row">
+        <div><label for="rlen">Длина рулона, м</label><input type="number" id="rlen" value="10.05" min="0"></div>
+        <div><label for="rwid">Ширина рулона, м</label><input type="number" id="rwid" value="1.06" min="0"></div>
+      </div>
+      <label for="rapport">Раппорт (подгонка рисунка), см</label><input type="number" id="rapport" value="0" min="0">
+      <div style="margin-top:18px;"><button id="calcBtn" type="button" style="background:var(--navy);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:600;font-size:15px;cursor:pointer;">Рассчитать</button></div>
+      <div class="calc-result" id="res">
+        <div class="big" id="resRolls">0 рулонов</div>
+        <div class="sub" id="resDetail"></div>
+      </div>
+    </div>
+
+    <div class="ad-slot">Рекламный блок РСЯ</div>
+
+    <div class="app-cta">
+      <h3>Выбрать обои и клей</h3>
+      <p>В приложении AI Ремонт подскажем тип обоев и клей под ваши стены.</p>
+      <a class="btn btn-primary" data-app-link href="#">Скачать в RuStore</a>
+    </div>
+
+    <p>См. также: <a href="kraska.html">калькулятор краски</a>.</p>
+  </article>
+
+  <aside class="article-aside">
+    <div class="sticky">
+      <div class="ad-slot tall">Рекламный блок РСЯ</div>
+      <div class="partner-box" data-partners>
+        <span class="tag">Партнёрские предложения</span>
+        <h4>Обои и материалы</h4>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025–2026 Zubcoder Apps · <a href="../">AI Ремонт</a></span>
+      <span>zubcoder.app@yandex.ru</span>
+    </div>
+    <p class="disclaimer">Расчёт ориентировочный. Берите 1 рулон про запас на подрезку.</p>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+<script>
+(function(){
+  document.getElementById('calcBtn').addEventListener('click', function(){
+    var L=parseFloat(document.getElementById('len').value)||0;
+    var W=parseFloat(document.getElementById('wid').value)||0;
+    var H=parseFloat(document.getElementById('hei').value)||0;
+    var rlen=parseFloat(document.getElementById('rlen').value)||10.05;
+    var rwid=parseFloat(document.getElementById('rwid').value)||1.06;
+    var rap=(parseFloat(document.getElementById('rapport').value)||0)/100;
+    var perim=2*(L+W);
+    var stripLen=H+rap; // запас на подгонку рисунка
+    var stripsPerRoll=Math.floor(rlen/stripLen);
+    if(stripsPerRoll<1){ document.getElementById('resRolls').textContent='—'; document.getElementById('resDetail').textContent='Длина рулона меньше высоты стены с раппортом'; document.getElementById('res').classList.add('show'); return; }
+    var stripsNeeded=Math.ceil(perim/rwid);
+    var rolls=Math.ceil(stripsNeeded/stripsPerRoll);
+    document.getElementById('resRolls').textContent=rolls+' рул.';
+    document.getElementById('resDetail').textContent=
+      'Периметр '+perim.toFixed(2)+' м · полотен нужно '+stripsNeeded+' · из рулона выходит '+stripsPerRoll+' полотна';
+    document.getElementById('res').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>

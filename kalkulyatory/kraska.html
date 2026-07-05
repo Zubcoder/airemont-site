@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор краски онлайн: сколько краски нужно на стены и потолок</title>
+<meta name="description" content="Онлайн-калькулятор расхода краски: рассчитайте, сколько литров краски нужно на стены и потолок по площади комнаты, с учётом числа слоёв и расхода на м².">
+<meta name="keywords" content="калькулятор краски, расход краски, сколько краски нужно, расчёт краски на стены, краска на м2">
+<link rel="canonical" href="https://airemont.ru/kalkulyatory/kraska.html">
+<meta property="og:title" content="Калькулятор краски онлайн">
+<meta property="og:description" content="Сколько краски нужно на стены и потолок — расчёт по площади.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://airemont.ru/kalkulyatory/kraska.html">
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .calc { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); max-width:560px; }
+  .calc label { display:block; font-weight:600; margin:14px 0 6px; font-size:15px; }
+  .calc input, .calc select { width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:10px; font-size:16px; font-family:inherit; }
+  .calc .row { display:flex; gap:14px; } .calc .row > div { flex:1; }
+  .calc-result { margin-top:22px; background:#eef1fb; border-radius:12px; padding:20px; display:none; }
+  .calc-result.show { display:block; }
+  .calc-result .big { font-size:32px; font-weight:800; color:var(--navy); }
+  .calc-result .sub { color:var(--text-soft); font-size:14px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="../" class="nav-brand"><img class="logo-badge" src="../assets/logo.png" alt="AI Ремонт"> AI Ремонт</a>
+    <button class="nav-burger" aria-label="Меню">☰</button>
+    <nav class="nav-links">
+      <a href="../#articles">Инструкции</a>
+      <a href="kraska.html">Калькуляторы</a>
+      <a class="nav-cta" data-app-link href="#">Скачать приложение</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumbs">
+  <a href="../">Главная</a> → Калькулятор краски
+</div>
+
+<div class="container article-wrap">
+  <article class="post">
+    <h1>Калькулятор краски</h1>
+    <div class="meta">Расчёт расхода по площади</div>
+    <p>Укажите размеры помещения — калькулятор посчитает площадь стен и нужный объём краски с учётом числа слоёв. Расход по умолчанию — усреднённый (уточняйте на банке краски).</p>
+
+    <div class="calc">
+      <div class="row">
+        <div><label for="len">Длина комнаты, м</label><input type="number" id="len" placeholder="4" min="0"></div>
+        <div><label for="wid">Ширина, м</label><input type="number" id="wid" placeholder="3" min="0"></div>
+      </div>
+      <div class="row">
+        <div><label for="hei">Высота стен, м</label><input type="number" id="hei" placeholder="2.7" min="0"></div>
+        <div><label for="openings">Проёмы (двери/окна), м²</label><input type="number" id="openings" placeholder="4" min="0"></div>
+      </div>
+      <div class="row">
+        <div><label for="layers">Число слоёв</label><select id="layers"><option>1</option><option selected>2</option><option>3</option></select></div>
+        <div><label for="usage">Расход, м²/л</label><input type="number" id="usage" value="10" min="1"></div>
+      </div>
+      <label><input type="checkbox" id="ceiling" style="width:auto;margin-right:8px;">Считать и потолок</label>
+      <div style="margin-top:18px;"><button class="copy-btn" id="calcBtn" type="button" style="background:var(--navy);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:600;font-size:15px;cursor:pointer;">Рассчитать</button></div>
+      <div class="calc-result" id="res">
+        <div class="big" id="resLitres">0 л</div>
+        <div class="sub" id="resDetail"></div>
+      </div>
+    </div>
+
+    <div class="ad-slot">Рекламный блок РСЯ</div>
+
+    <div class="app-cta">
+      <h3>Подобрать краску и инструмент</h3>
+      <p>В приложении AI Ремонт подскажем тип краски под задачу (стены, потолок, влажные помещения).</p>
+      <a class="btn btn-primary" data-app-link href="#">Скачать в RuStore</a>
+    </div>
+
+    <p>См. также: <a href="oboi.html">калькулятор обоев</a>.</p>
+  </article>
+
+  <aside class="article-aside">
+    <div class="sticky">
+      <div class="ad-slot tall">Рекламный блок РСЯ</div>
+      <div class="partner-box" data-partners>
+        <span class="tag">Партнёрские предложения</span>
+        <h4>Краски и инструмент</h4>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025–2026 Zubcoder Apps · <a href="../">AI Ремонт</a></span>
+      <span>zubcoder.app@yandex.ru</span>
+    </div>
+    <p class="disclaimer">Расчёт ориентировочный. Точный расход указан на упаковке краски.</p>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+<script>
+(function(){
+  function fmt(n){ return n.toLocaleString('ru-RU',{maximumFractionDigits:2}); }
+  document.getElementById('calcBtn').addEventListener('click', function(){
+    var L=parseFloat(document.getElementById('len').value)||0;
+    var W=parseFloat(document.getElementById('wid').value)||0;
+    var H=parseFloat(document.getElementById('hei').value)||0;
+    var op=parseFloat(document.getElementById('openings').value)||0;
+    var layers=parseInt(document.getElementById('layers').value,10)||1;
+    var usage=parseFloat(document.getElementById('usage').value)||10;
+    var ceiling=document.getElementById('ceiling').checked;
+    var walls=2*(L+W)*H - op;
+    if(walls<0) walls=0;
+    var area=walls + (ceiling ? L*W : 0);
+    var litres=area*layers/usage;
+    document.getElementById('resLitres').textContent=fmt(Math.ceil(litres*10)/10)+' л';
+    document.getElementById('resDetail').textContent=
+      'Площадь окраски: '+fmt(Math.round(area*100)/100)+' м² × '+layers+' сл. ÷ '+usage+' м²/л';
+    document.getElementById('res').classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
