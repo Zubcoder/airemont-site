@@ -1,16 +1,16 @@
-/* AI Юрист — сайт. Общие стили. */
+/* AI Ремонт — сайт. Общие стили (оранжевая тема). */
 :root {
-  --navy: #1A237E;
-  --navy-dark: #0d1442;
-  --navy-light: #3949ab;
-  --accent: #ffb300;
-  --bg: #f6f7fb;
+  --navy: #D2461A;
+  --navy-dark: #7c2d12;
+  --navy-light: #f97316;
+  --accent: #ffc24b;
+  --bg: #faf7f4;
   --bg-card: #ffffff;
-  --text: #1c2033;
-  --text-soft: #565c73;
-  --border: #e6e8f0;
+  --text: #1f1a17;
+  --text-soft: #6b5f57;
+  --border: #ece6e1;
   --ok: #2e7d32;
-  --shadow: 0 6px 24px rgba(26, 35, 126, 0.08);
+  --shadow: 0 6px 24px rgba(210, 70, 26, 0.10);
   --radius: 14px;
   --maxw: 1120px;
 }
